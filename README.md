@@ -28,7 +28,7 @@ The copied code should look like this:
 
 ![enter image description here](https://github.com/PawelNackiewicz/vue-svg-wrapper/blob/main/docs/4.png)
 
-Make sure that the width height and viewPort values have the same value as the height and width of the previously created frame.
+Make sure that the width height and viewBox values have the same value as the height and width of the previously created frame.
 
 Then copy from the path tag the value for the d parameter and paste this as the value for the key at the icon map.
 ```js
