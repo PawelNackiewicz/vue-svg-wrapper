@@ -4,6 +4,7 @@
 When building large applications in which icons are used in different sizes, themes and colors, a good icon management system is missing. There is also a lack of a tool that tells you what icons are in the project. In addition, large applications are missing an automatic tool that will generate all available icons, for example in Storybook.
 
 **Solution**
+
 The idea is to store all available icons in the [map in a key-value structure](https://github.com/PawelNackiewicz/vue-svg-wrapper/blob/main/src/components/Icons.ts). The key is the name of the icon and the value is the path in svg. We use the icon by calling the Icon component and in the props give the name of the icon (key from the map). In addition, the component has the ability to specify props for color, size and class for svg wrappers at different levels.
 By using TypeScript, you can get automatic prompting of available icons. In addition, with a map of all icons, you can quickly generate a [storybook file](https://github.com/PawelNackiewicz/vue-svg-wrapper/blob/main/src/components/Icons.stories.ts) that will display an always up-to-date list of icons without any additional work.
 
