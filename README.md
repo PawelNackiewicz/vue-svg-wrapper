@@ -15,14 +15,11 @@ By using TypeScript, you can get automatic prompting of available icons. In addi
 **How to add a new icon?**
 
 I recommend using a tool like Figma. 
-
-![Prepare the icon in SVG format](https://github.com/PawelNackiewicz/vue-svg-wrapper/blob/main/docs/1.png)
-
-Copy the Icon and then prepare a clean frame preferably with dimensions of 20 by 20 px.
-
-![enter image description here](https://github.com/PawelNackiewicz/vue-svg-wrapper/blob/main/docs/3.png)
+Prepare Icon in SVG format preferably in Frame 20 x20
 
 ![enter image description here](https://github.com/PawelNackiewicz/vue-svg-wrapper/blob/main/docs/2.png)
+
+![Prepare the icon in SVG format](https://github.com/PawelNackiewicz/vue-svg-wrapper/blob/main/docs/1.png)
 
 Adjust the icon to be in the center of the frame and then copy the icon.
 
