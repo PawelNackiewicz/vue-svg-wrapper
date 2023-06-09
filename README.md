@@ -17,13 +17,21 @@ By using TypeScript, you can get automatic prompting of available icons. In addi
 I recommend using a tool like Figma. 
 
 ![Prepare the icon in SVG format](https://github.com/PawelNackiewicz/vue-svg-wrapper/blob/main/docs/1.png)
+
 Copy the Icon and then prepare a clean frame preferably with dimensions of 20 by 20 px.
+
 ![enter image description here](https://github.com/PawelNackiewicz/vue-svg-wrapper/blob/main/docs/3.png)
+
 ![enter image description here](https://github.com/PawelNackiewicz/vue-svg-wrapper/blob/main/docs/2.png)
+
 Adjust the icon to be in the center of the frame and then copy the icon.
+
 The copied code should look like this:
+
 ![enter image description here](https://github.com/PawelNackiewicz/vue-svg-wrapper/blob/main/docs/4.png)
+
 Make sure that the width height and viewPort values have the same value as the height and width of the previously created frame.
+
 Then copy from the path tag the value for the d parameter and paste this as the value for the key at the icon map.
 ```js
 iconName: 'M10 1.04167C8.50821 1.04167 7.07747 1.6343 6.0225...'
