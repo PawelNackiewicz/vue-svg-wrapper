@@ -1,18 +1,38 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, type PropType } from 'vue'
+import type { IconName } from './Icons';
 
 export default defineComponent({
-    // type inference enabled
     props: {
-        name: String,
-        size: Number,
-        color: String,
-        className: String,
-        classNameG: String
+        name: {
+            type: Object as PropType<IconName>,
+            required: true
+        },
+        size: {
+            type: Number,
+            required: false
+        },
+        color: {
+            type: String,
+            required: false
+        },
+        className: {
+            type: String,
+            required: false
+        },
+        classNameG: {
+            type: String,
+            required: false
+        }
     },
     data() {
         return {
             defaultSize: 20
+        }
+    },
+    computed: {
+        svgSize() {
+            return this.size || this.defaultSize
         }
     }
 })
@@ -20,10 +40,10 @@ export default defineComponent({
 
 
 <template>
-    <svg :width="size" :height="size" :viewBox="`0 0 ${size} ${size}`" xmlns="http://www.w3.org/2000/svg"
+    <svg :width="svgSize" :height="svgSize" :viewBox="`0 0 ${svgSize} ${svgSize}`" xmlns="http://www.w3.org/2000/svg"
         :class="className">
-        <g :class="classNameG" :transform="`scale(${size / defaultSize})`" :fill="color">
-            {props.children}
+        <g :class="classNameG" :transform="`scale(${svgSize / defaultSize})`" :fill="color">
+            <slot />
         </g>
     </svg>
 </template>
